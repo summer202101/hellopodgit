@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EGP0000_09" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="786" leftMargin="28" rightMargin="28" topMargin="42" bottomMargin="0" uuid="c42dca91-5906-4a88-8014-e97d3328ade3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="293"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="693"/>
+	<parameter name="貸付日" class="java.lang.String"/>
+	<parameter name="指定病院等の番号" class="java.lang.String"/>
+	<parameter name="医療機関名" class="java.lang.String"/>
+	<parameter name="帳票内ページ番号" class="java.lang.String"/>
+	<parameter name="枚数管理" class="java.lang.String"/>
+	<parameter name="ページオフセット" class="java.lang.String"/>
+	<parameter name="基本コマンド" class="java.lang.String"/>
+	<parameter name="ページシーケンス" class="java.lang.String"/>
+	<parameter name="セットシーケンス" class="java.lang.String"/>
+	<queryString language="csv">
+		<![CDATA[]]>
+	</queryString>
+	<field name="帳票ID" class="java.lang.String">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="0"/>
+	</field>
+	<field name="フラグ" class="java.lang.String">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="1"/>
+	</field>
+	<field name="受付日" class="java.lang.String">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="2"/>
+	</field>
+	<field name="労働保険番号又は年金証書番号" class="java.lang.String">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="3"/>
+	</field>
+	<field name="生年月日" class="java.lang.String">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="4"/>
+	</field>
+	<field name="傷病年月日" class="java.lang.String">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="5"/>
+	</field>
+	<field name="療養期間始期" class="java.lang.String">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="6"/>
+	</field>
+	<field name="療養期間終期" class="java.lang.String">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="7"/>
+	</field>
+	<field name="診療費請求額" class="java.lang.Long">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="8"/>
+	</field>
+	<field name="査定等増減額" class="java.lang.Long">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="9"/>
+	</field>
+	<field name="借入額" class="java.lang.Long">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="10"/>
+	</field>
+	<field name="合計件数" class="java.lang.Long">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="11"/>
+	</field>
+	<field name="合計診療費請求額" class="java.lang.Long">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="12"/>
+	</field>
+	<field name="合計査定等増減額" class="java.lang.Long">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="13"/>
+	</field>
+	<field name="合計借入額" class="java.lang.Long">
+		<property name="net.sf.jasperreports.csv.field.column.index" value="14"/>
+	</field>
+	<variable name="isD1" class="java.lang.Boolean">
+		<variableExpression><![CDATA[$F{フラグ}.equals("D1")]]></variableExpression>
+	</variable>
+	<variable name="isT" class="java.lang.Boolean">
+		<variableExpression><![CDATA[$F{フラグ}.equals("T")]]></variableExpression>
+	</variable>
+	<background>
+		<band height="502">
+			<rectangle>
+				<reportElement mode="Transparent" x="16" y="80" width="754" height="400" uuid="75e937f1-8804-404d-9e84-041887b83996"/>
+				<graphicElement>
+					<pen lineWidth="0.2" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="96" y="95" width="407" height="1" uuid="e803d3fe-e433-43c9-b107-cd2e93323c15"/>
+				<graphicElement>
+					<pen lineWidth="0.2"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="16" y="110" width="754" height="1" uuid="52d75bdc-e728-4223-80f4-ec626228178c"/>
+				<graphicElement>
+					<pen lineWidth="0.2"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="95" y="80" width="1" height="400" uuid="b1261d7f-a1f4-4dcb-bd7e-fadc89d43fa6"/>
+				<graphicElement>
+					<pen lineWidth="0.2"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="204" y="96" width="1" height="384" uuid="30bacb35-e17b-4974-bcb0-502782479610"/>
+				<graphicElement>
+					<pen lineWidth="0.2"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="345" y="80" width="1" height="400" uuid="df073934-d26c-4210-a2ea-561ef66e7ab7"/>
+				<graphicElement>
+					<pen lineWidth="0.2"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="424" y="96" width="1" height="384" uuid="4d40fbfa-0e4d-4380-941e-7e784f0de8b0"/>
+				<graphicElement>
+					<pen lineWidth="0.2"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="503" y="80" width="1" height="400" uuid="60e93251-b8ce-4895-8342-9837f2a3bab8"/>
+				<graphicElement>
+					<pen lineWidth="0.2"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="592" y="80" width="1" height="400" uuid="597d2e80-73c5-43fe-8685-309854bfa8fb"/>
+				<graphicElement>
+					<pen lineWidth="0.2"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="682" y="80" width="1" height="400" uuid="d6f0c7e5-ca83-43ed-845a-1ee6046fed65"/>
+				<graphicElement>
+					<pen lineWidth="0.2"/>
+				</graphicElement>
+			</line>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="110">
+			<staticText>
+				<reportElement x="0" y="2" width="133" height="11" uuid="477b34cf-54c6-4620-8d80-88b9f928bfbb"/>
+				<textElement>
+					<font fontName="ＭＳ ゴシック" size="11" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[（貸付様式第6号） 別紙3]]></text>
+			</staticText>
+			<textField pattern="GGBY年BM月BD日">
+				<reportElement x="668" y="12" width="116" height="11" uuid="d10de43b-b953-4433-a5b2-db8ac11d4f6d">
+					<property name="com.jaspersoft.studio.element.name" value="貸付日"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="ＭＳ ゴシック" size="11" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{貸付日}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="189" y="29" width="410" height="14" uuid="fab1e69a-16ee-4315-a2cf-bd9ff17c5c43"/>
+				<textElement textAlignment="Justified">
+					<font fontName="ＭＳ 明朝" size="14" pdfFontName="C:\Windows\Fonts\msmincho.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[労災診療援護貸付金額に対する貸付金未精算額（保留額）内訳書]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="55" width="98" height="9" uuid="18de0a72-9cb7-4859-b2ee-7b75b8025deb"/>
+				<textElement textAlignment="Left">
+					<font fontName="ＭＳ ゴシック" size="9" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[病院又は診療所名]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="469" y="55" width="32" height="9" uuid="356a6976-9769-454c-a8ee-6070926a390a">
+					<property name="com.jaspersoft.studio.element.name" value="指定病院等の番号"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="ＭＳ ゴシック" size="9" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{指定病院等の番号}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="374" y="67" width="400" height="11" uuid="bbe96c33-7190-45c4-aa9f-558f6c4aa25c">
+					<property name="com.jaspersoft.studio.element.name" value="指定医療機関名"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="ＭＳ ゴシック" size="11" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{医療機関名}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="95" y="83" width="250" height="10" uuid="9d0167e6-b870-4804-9c98-289b2da35b82"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[通知番号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="83" width="158" height="10" uuid="903b175d-8532-4421-a44c-057e19da3583"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[療養期間]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="91" width="79" height="10" uuid="bf501fbf-1f4c-45b3-b994-8cbca5021de2"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[受付年月日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="507" y="91" width="81" height="10" uuid="8a9ef4a2-b52e-42bd-8bf3-c99389a8a40b"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[診療費請求額]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="597" y="91" width="80" height="10" uuid="f1a51f5b-bfa3-467f-bc23-6818c99681b5"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[査定等増減額]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="681" y="91" width="90" height="10" uuid="28c6ee10-fe8b-4849-9626-8e0f25cda150"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[立替額]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="98" width="109" height="10" uuid="728cd067-8fbc-47c7-864a-7756e6fd495f"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[保険(年金証書)番号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="98" width="141" height="10" uuid="38266395-264d-45ad-b579-55a4f0257ce8"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[生年月日・傷病年月日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="98" width="79" height="10" uuid="2e0dffde-6d30-497b-86be-fc254a0a2af0"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[始期]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="98" width="79" height="10" uuid="0b8ff3ca-6611-4c48-b79b-328a8569c85f"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[終期]]></text>
+			</staticText>
+			<image>
+				<reportElement x="607" y="-24" width="50" height="50" uuid="b800b087-d2d4-4b31-b8e4-01728f524c24"/>
+				<imageExpression><![CDATA[$P{基本コマンド}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="668" y="-24" width="50" height="50" uuid="ac6c55bd-07c1-48ae-871f-5d0907c218df"/>
+				<imageExpression><![CDATA[$P{ページシーケンス}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="727" y="-24" width="50" height="50" uuid="0009bffa-cc22-4591-b0ae-a88e88e8ad6a"/>
+				<imageExpression><![CDATA[$P{セットシーケンス}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="16">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$V{isD1}]]></printWhenExpression>
+			<textField pattern="00000000000000">
+				<reportElement x="95" y="3" width="109" height="10" uuid="ea1d57f1-ebc0-4bdb-8a2e-6cb3d43fc87e">
+					<property name="com.jaspersoft.studio.element.name" value="労働保険番号又は年金証書番号"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{労働保険番号又は年金証書番号}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="16" y="3" width="79" height="10" uuid="c56a05c3-5013-4518-b9a5-2731efc0e5de">
+					<property name="com.jaspersoft.studio.element.name" value="受付日"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{受付日}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="205" y="3" width="79" height="10" uuid="47c89c3e-7b42-47f2-aef6-06a169b51908">
+					<property name="com.jaspersoft.studio.element.name" value="生年月日"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{生年月日}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="267" y="3" width="79" height="10" uuid="99be5796-37c3-4cb8-936b-f872f205e579">
+					<property name="com.jaspersoft.studio.element.name" value="傷病年月日"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{傷病年月日}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="3" width="79" height="10" uuid="09ee3f2f-e8f3-4d3b-8098-0db2e2a1c07b">
+					<property name="com.jaspersoft.studio.element.name" value="療養期間始期"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{療養期間始期}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="3" width="79" height="10" uuid="338be112-35fd-4916-9df5-74765a901478">
+					<property name="com.jaspersoft.studio.element.name" value="療養期間終期"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{療養期間終期}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###,###,##0" isBlankWhenNull="true">
+				<reportElement x="524" y="3" width="65" height="10" uuid="a1f9fb02-7260-4938-9a95-040b22e8d7b1">
+					<property name="com.jaspersoft.studio.element.name" value="診療費請求額"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{診療費請求額}]]></textFieldExpression>
+			</textField>
+			<textField pattern="##,###,###,##0" isBlankWhenNull="true">
+				<reportElement x="604" y="3" width="75" height="10" uuid="0ef5d8f4-31b3-42a1-ac33-ac217e72d73c">
+					<property name="com.jaspersoft.studio.element.name" value="査定等増減額"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{査定等増減額}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###,###,##0" isBlankWhenNull="true">
+				<reportElement x="702" y="3" width="65" height="10" uuid="9ae59800-a26c-4c68-8915-5e0cc4b69c46">
+					<property name="com.jaspersoft.studio.element.name" value="借入額"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{借入額}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="30">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$V{isT}]]></printWhenExpression>
+			<staticText>
+				<reportElement x="290" y="3" width="32" height="10" uuid="4b76aac7-22cf-40ad-9305-a6371dbbbb4b"/>
+				<textElement>
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[合　計]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="755" y="15" width="13" height="10" uuid="2c475538-296a-4bdb-bf20-5616f372a68f"/>
+				<textElement textAlignment="Right">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[⑩]]></text>
+			</staticText>
+			<textField pattern="##0件" isBlankWhenNull="true">
+				<reportElement x="382" y="3" width="25" height="10" uuid="4677511c-ccc5-49cc-8160-4d9b182f5dc8">
+					<property name="com.jaspersoft.studio.element.name" value="合計件数"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{合計件数}]]></textFieldExpression>
+			</textField>
+			<textField pattern="##,###,###,##0" isBlankWhenNull="true">
+				<reportElement x="604" y="3" width="75" height="10" uuid="bf241f78-8366-4801-9da5-109a6b593a58">
+					<property name="com.jaspersoft.studio.element.name" value="合計査定等増減額"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{合計査定等増減額}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###,###,##0" isBlankWhenNull="true">
+				<reportElement x="517" y="3" width="72" height="10" uuid="271bcd00-7279-48a6-b331-a6045182e65b">
+					<property name="com.jaspersoft.studio.element.name" value="合計診療費請求額"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{合計診療費請求額}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,###,###,##0" isBlankWhenNull="true">
+				<reportElement x="684" y="3" width="83" height="10" uuid="04e37be3-cf7c-424f-8104-9881ebc37398">
+					<property name="com.jaspersoft.studio.element.name" value="合計借入額"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="ＭＳ ゴシック" size="10" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{合計借入額}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="65">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="374" y="39" width="8" height="11" uuid="cecb40de-1a40-446b-aeec-77f159b5943f"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="11" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="39" width="8" height="11" uuid="9b832d49-d5fc-49f0-bf05-81a397cd2266"/>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="11" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<textField pattern="##0">
+				<reportElement x="384" y="39" width="17" height="11" uuid="61478b64-73b2-448f-872c-97d2331d8ac4">
+					<property name="com.jaspersoft.studio.element.name" value="ページ番号"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="11" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[INTEGER_VALUE( $P{ページオフセット})+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0" isBlankWhenNull="true">
+				<reportElement x="493" y="39" width="1" height="11" forecolor="#FFFFFF" uuid="75b34f77-ae1a-4550-9fdc-94b509607f9e">
+					<property name="com.jaspersoft.studio.element.name" value="帳票内ページ番号"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="11" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{帳票内ページ番号}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="505" y="39" width="261" height="9" uuid="1625a976-9ade-4c02-af4f-0950d47522cb">
+					<property name="com.jaspersoft.studio.element.name" value="枚数管理"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="ＭＳ ゴシック" size="9" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{枚数管理}]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0" isBlankWhenNull="true">
+				<reportElement x="771" y="39" width="3" height="11" forecolor="#FFFFFF" uuid="ca75e0f2-9406-4620-a116-823fc89ceed1">
+					<property name="com.jaspersoft.studio.element.name" value="ページオフセット"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="ＭＳ ゴシック" size="11" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ページオフセット}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="3" width="487" height="8" uuid="7c640af6-774a-4b5b-af89-d53c5cebbe88"/>
+				<textElement textAlignment="Left">
+					<font fontName="ＭＳ ゴシック" size="8" pdfFontName="C:\Windows\Fonts\msgothic.ttc,0" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[本表は、国からの診療費支払が保留となっているため、未精算となっているレセプトの明細を表示しております。]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
